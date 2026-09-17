@@ -1,0 +1,64 @@
+{
+ "KXGOLDH": {
+  "events": 0,
+  "curve": [],
+  "fit": null,
+  "stale_raw": null,
+  "n_markets": 80
+ },
+ "KXGOLDD": {
+  "events": 1,
+  "curve": [],
+  "fit": null,
+  "stale_raw": 0.06272727272727273,
+  "n_markets": 40
+ },
+ "KXGOLDW": {
+  "events": 1,
+  "curve": [
+   [
+    1,
+    0.027893932531387836
+   ],
+   [
+    2,
+    0.2804016084876368
+   ]
+  ],
+  "fit": null,
+  "stale_raw": 0.46,
+  "n_markets": 40
+ },
+ "KXBTCD": {
+  "events": 1,
+  "curve": [
+   [
+    1,
+    0.009493500338590982
+   ],
+   [
+    2,
+    0.25500612989333243
+   ]
+  ],
+  "fit": null,
+  "stale_raw": 0.15037593984962405,
+  "n_markets": 318
+ },
+ "KXETHD": {
+  "events": 1,
+  "curve": [
+   [
+    1,
+    0.005833249723647012
+   ],
+   [
+    2,
+    0.378698153969806
+   ]
+  ],
+  "fit": null,
+  "stale_raw": 0.15384615384615385,
+  "n_markets": 390
+ }
+}

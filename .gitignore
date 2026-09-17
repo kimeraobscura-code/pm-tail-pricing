@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+cache/
+out/
+raw/
+*.log
+*.err
+*.bak
+.DS_Store
+cme_drop/
+archive/
+.env

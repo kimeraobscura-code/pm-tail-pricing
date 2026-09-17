@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.hscollect</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>__DIR__/collect.py</string>
+  </array>
+  <key>WorkingDirectory</key><string>__DIR__</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HS_TOP_N</key><string>250</string>
+    <key>HS_WORKERS</key><string>12</string>
+    <key>HS_BOOK_EVERY</key><string>60</string>
+    <key>HS_UNI_EVERY</key><string>60</string>
+    <key>HS_UNI_FULL_EVERY</key><string>1800</string>
+    <key>HS_TRADE_EVERY</key><string>10</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>__DIR__/collect.out</string>
+  <key>StandardErrorPath</key><string>__DIR__/collect.err</string>
+  <key>ProcessType</key><string>Background</string>
+</dict>
+</plist>
