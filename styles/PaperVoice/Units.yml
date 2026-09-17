@@ -1,0 +1,7 @@
+# nonword 가 없으면 '2.4pp' 의 pp 앞에 단어경계가 없어 안 걸린다.
+extends: consistency
+message: "단위 표기 불일치: '%s'. 원고 전체에서 하나로 통일할 것."
+level: error
+nonword: true
+either:
+  pp: percentage points

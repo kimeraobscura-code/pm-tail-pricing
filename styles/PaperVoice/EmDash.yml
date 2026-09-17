@@ -1,0 +1,8 @@
+# 대필·외부용 글의 대시 금지 규칙. 학술 원고에서는 정당한 쓰임이 많아
+# suggestion 으로 둔다. 끄려면 .vale.ini 에 `PaperVoice.EmDash = NO` 추가.
+extends: existence
+message: "대시 '%s' — 쉼표·괄호·마침표로 바꿀 수 있는지 볼 것."
+level: suggestion
+nonword: true
+tokens:
+  - '\s[—–]\s'

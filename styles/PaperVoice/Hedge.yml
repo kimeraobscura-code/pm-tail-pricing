@@ -1,0 +1,18 @@
+extends: existence
+message: "군더더기: '%s'. 지우면 문장이 더 강해진다."
+level: suggestion
+ignorecase: true
+tokens:
+  - very
+  - quite
+  - rather
+  - somewhat
+  - fairly
+  - basically
+  - essentially
+  - arguably
+  - might possibly
+  - could potentially
+  - in order to
+  - due to the fact that
+  - a (?:large|small) number of

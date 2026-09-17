@@ -1,0 +1,23 @@
+extends: existence
+message: "AI 문체: '%s'. 빼거나 구체적 서술로 바꿀 것."
+level: error
+ignorecase: true
+tokens:
+  - it (?:is|'s) worth noting
+  - it (?:is|'s) important to (?:note|remember|understand)
+  - delve into
+  - a testament to
+  - plays? an? (?:crucial|vital|key|pivotal|critical) role
+  - in the realm of
+  - navigat(?:e|ing) the (?:complex|complexities|landscape)
+  - underscor(?:e|es|ing) the importance
+  - the landscape of
+  - shed(?:s|ding)? light on
+  - pav(?:e|es|ing) the way
+  - at the heart of
+  - stands? as a
+  - serves? as a (?:testament|reminder|foundation)
+  - in today's .{0,25}(?:world|market|environment)
+  - it should be noted that
+  - as we (?:have )?(?:seen|discussed)
+  - this (?:begs|raises) the question

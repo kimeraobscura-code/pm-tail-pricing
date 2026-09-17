@@ -13,9 +13,10 @@
    "claim": "사다리 내재가격 ρ²=0.965 (단일 행사가 0.041)",
    "value": 0.965,
    "tol": 0.01,
-   "source": "results/verify1_fits.json",
-   "recompute": "analysis/ladder.py",
-   "where": "README §1"
+   "source": "맥미니 hs-research 2026-08-25 배치 job3 (미커밋)",
+   "recompute": "analysis/job3_atten.py",
+   "where": "README §1",
+   "pending_artifact": "results/job3_atten.json"
   },
   {
    "id": "C2-atm-premium",
@@ -23,9 +24,10 @@
    "claim": "금 일별 등가격 내재σ 0.301 대 실현 0.265 (+13%)",
    "value": 0.301,
    "tol": 0.005,
-   "source": "results/verify1_fits.json",
+   "source": "맥미니 hs-research 2026-08-25 배치 job2 (미커밋)",
    "recompute": "analysis/job2_smile.py",
-   "where": "README §2"
+   "where": "README §2",
+   "pending_artifact": "results/job2_summary.json"
   },
   {
    "id": "C2-otm-ratio",
@@ -33,10 +35,11 @@
    "claim": "외가격 내재σ = 실현의 2.86배",
    "value": 2.86,
    "tol": 0.05,
-   "source": "results/verify1_fits.json",
+   "source": "맥미니 hs-research 2026-08-25 배치 job2 (미커밋)",
    "recompute": "analysis/job2_smile.py",
    "where": "README §2",
-   "caveat": "만기 맞춘 상장옵션 스마일과 비교 전까지는 '스마일 존재' 이상을 주장할 수 없다. job10 이 판정."
+   "caveat": "만기 맞춘 상장옵션 스마일과 비교 전까지는 '스마일 존재' 이상을 주장할 수 없다. job10 이 판정.",
+   "pending_artifact": "results/job2_summary.json"
   },
   {
    "id": "C3-paired-low",
@@ -44,10 +47,10 @@
    "claim": "저가구간 편의: 정체 120분 표본에서 호가 -2.40%p·체결 -2.05%p(차이 비유의). 정체 5분 표본에서는 -0.21%p·-0.23%p 로 소멸",
    "value": -0.0021,
    "tol": 0.002,
-   "source": "results/job8b_paired.json",
+   "source": "results/job8b_paired_stale5.json",
    "recompute": "analysis/job8b_paired.py",
    "where": "README §3",
-   "robustness": "out/job8b_paired_stale5.json (정체 중앙 0분·p90 3분)",
+   "robustness": "results/job8b_paired.json (정체 120분 기준선: 호가 -2.40%p · 체결 -2.05%p, 계약 1,135개)",
    "caveat": "**강건성 실패**: STALE_MAX=5 재실행(계약 422개)에서 저가구간 편의가 호가·체결 양쪽 모두 -0.2%p 로 붕괴. 고가구간 Δ 도 +1.34(유의) → +0.65(비유의). 해석: -2.05%p 는 '체결가'가 아니라 최대 2시간 묵은 가격을 쓴 표본의 성질이며, 5분 내 실제로 거래되는 계약에서는 편의가 없다. → 편의는 가격 현상이 아니라 **유동성 현상**일 수 있다. §3 재작성 필요."
   },
   {
@@ -56,9 +59,10 @@
    "claim": "BTC 일별 외가격 분봉 57.6%가 최소틱",
    "value": 0.576,
    "tol": 0.01,
-   "source": "hs-research job2",
+   "source": "맥미니 hs-research 2026-08-25 배치 job2 (미커밋)",
    "recompute": "analysis/job2_smile.py",
-   "where": "README §4"
+   "where": "README §4",
+   "pending_artifact": "results/job2_summary.json"
   },
   {
    "id": "C5-decay-ratio",
@@ -66,10 +70,11 @@
    "claim": "감쇠상수 금 일별 0.208h 대 주별 1.421h (7배)",
    "value": 6.83,
    "tol": 0.3,
-   "source": "results/prereg2_result.json",
+   "source": "맥미니 hs-research 2026-08-25 배치 job3 (미커밋)",
    "recompute": "analysis/job3_atten.py",
    "where": "README §5",
-   "caveat": "만기 민감도(델타) 차이와 분리되지 않음. n=10."
+   "caveat": "만기 민감도(델타) 차이와 분리되지 않음. n=10. 사전등록2(results/prereg2_result.json, 이벤트 20/10)는 0.2824h/1.7957h = 6.36 으로 다른 값을 준다. §5 가 인용하는 0.208h/1.421h = 6.83 은 job3 규모 확장판(이벤트 38/10)의 값이고, job3 는 자기 문서화 문자열에서 사전등록 판정을 대체하지 않는다고 밝힌다. 둘 중 무엇을 본문에 둘지는 미결.",
+   "pending_artifact": "results/job3_atten.json"
   },
   {
    "id": "C7-gld-bleed",

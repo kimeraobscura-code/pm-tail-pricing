@@ -1,0 +1,7 @@
+# scope: paragraph + ^ 조합은 이 버전에서 안 걸린다. (?m)^ 로 줄머리를 직접 잡는다.
+extends: existence
+message: "나열식 문단 도입부 '%s'. 목록이 필요하면 진짜 목록으로, 아니면 그냥 이어 쓸 것."
+level: suggestion
+nonword: true
+tokens:
+  - (?m)^(?:First|Second|Third|Fourth|Fifth|Finally|Moreover|Furthermore|Additionally),

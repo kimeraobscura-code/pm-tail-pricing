@@ -1,0 +1,7 @@
+extends: existence
+message: "'%s' — 통계적 유의성과 혼동된다. 'statistically significant' 로 명시하거나 large/substantial 로 바꿀 것."
+level: warning
+ignorecase: false
+tokens:
+  - significantly
+  - significant

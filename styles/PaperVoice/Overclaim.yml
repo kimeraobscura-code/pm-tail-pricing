@@ -1,0 +1,18 @@
+extends: existence
+message: "과잉주장: '%s'. 심사자가 먼저 집는 표현이다. 측정치로 대체하거나 근거를 붙일 것."
+level: warning
+ignorecase: true
+tokens:
+  - novel (?:approach|method|framework|finding)
+  - unprecedented
+  - groundbreaking
+  - revolutioniz(?:e|es|ing)
+  - (?:we |this )?prov(?:e|es|en) that
+  - definitively
+  - conclusively
+  - clearly (?:shows?|demonstrates?|indicates?)
+  - obviously
+  - without a doubt
+  - dramatic(?:ally)?
+  - the first (?:study|paper|work) to
+  - state[- ]of[- ]the[- ]art

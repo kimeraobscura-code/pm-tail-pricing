@@ -17,9 +17,15 @@ python 3.9 호환.
 """
 import json, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-REPO = ROOT/"pm-tail-pricing"
+# ROOT 가 이미 레포 루트다. 예전엔 REPO = ROOT/"pm-tail-pricing" 이라 늘 없는 경로를
+# 가리켰고, readmes 가 빈 문자열이 되어 3)번 문서-데이터 동기화 검사가 조용히
+# 통과하고 있었다. 값 대조(2번)는 reconcile.py 가 맡는다.
+REPO = ROOT
+# 원고가 유니코드 빼기표(−)를 쓰므로 정규화하지 않으면 부호 있는 수치를 놓친다.
+DASHES = str.maketrans({"−":"-","–":"-","—":"-","‐":"-"," ":" "})
 def num_in(text, v, tol):
     if v is None: return True
+    text = text.translate(DASHES)
     for m in re.finditer(r"-?\d+\.?\d*", text.replace(",", "")):
         try: x=float(m.group())
         except ValueError: continue

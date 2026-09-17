@@ -1,0 +1,9 @@
+# 자체 파일로 둔다. AiTells 의 토큰 목록에 섞어 넣으면 교대(alternation) 안에서
+# 지연 수량자가 걸리지 않는다 — 격리 테스트로 확인.
+extends: existence
+message: "AI 문체: '%s'. 'X 뿐 아니라 Y' 구문은 풀어 쓸 것."
+level: error
+ignorecase: true
+nonword: true
+tokens:
+  - not only [^.]{1,60} but also
