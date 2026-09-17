@@ -17,7 +17,12 @@ no accounts or keys at all; the depth-history jobs behind results 8–9 need one
 free API key (Predexon — its historical order-book endpoints are free and
 unmetered).
 
-## First results (all measured with the code in this repo)
+## First results
+
+Each result is registered in `verify/claims.json` with its source artifact, its
+recompute script and its current reproducibility status. `bash scripts/check.sh`
+recomputes what this repository can reach and reports what it cannot;
+`CHECKS.md` documents the loop.
 
 ### 1. Ladders identify the underlying; single strikes do not
 Individual strike contracts correlate weakly with the underlying
